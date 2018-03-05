@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5ed2785-0df1-49bd-b526-65384be00dc7" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__java3d_vecmath_1_3_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/mgame.iml" afterPath="$PROJECT_DIR$/mgame.iml" />
       <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -399,12 +402,12 @@
       <option name="presentableId" value="Default" />
       <updated>1520234526735</updated>
       <workItem from="1520234531070" duration="2765000" />
-      <workItem from="1520243200341" duration="678000" />
+      <workItem from="1520243200341" duration="762000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3443000" />
+    <option name="totallyTimeSpent" value="3527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="26" width="1400" height="968" extended-state="0" />

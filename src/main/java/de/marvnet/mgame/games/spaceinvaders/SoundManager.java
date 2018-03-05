@@ -31,13 +31,20 @@
  */
 package de.marvnet.mgame.games.spaceinvaders;
 
+import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
 
 import org.lwjgl.BufferUtils;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.openal.AL;
 import org.lwjgl.openal.AL10;
+import org.lwjgl.openal.ALC;
+import org.lwjgl.openal.ALCCapabilities;
 import org.lwjgl.util.WaveData;
+
+import static org.lwjgl.openal.ALC10.alcCreateContext;
+import static org.lwjgl.openal.ALC10.alcMakeContextCurrent;
+import static org.lwjgl.openal.ALC10.alcOpenDevice;
 
 
 /**
@@ -117,7 +124,7 @@ public class SoundManager {
      */
     public void initialize(int channels) {
         try {
-            AL.create();
+
 
             // allocate sources
             scratchBuffer.limit(channels);
@@ -172,7 +179,6 @@ public class SoundManager {
             // stop playing sounds
             scratchBuffer.position(0).limit(sources.length);
             scratchBuffer.put(sources).flip();
-            AL10.alSourceStop(scratchBuffer);
 
             // destroy sources
             AL10.alDeleteSources(scratchBuffer);
@@ -181,9 +187,7 @@ public class SoundManager {
             scratchBuffer.position(0).limit(bufferIndex);
             scratchBuffer.put(buffers, 0, bufferIndex).flip();
             AL10.alDeleteBuffers(scratchBuffer);
-
-            // destory OpenAL
-            AL.destroy();
+//
         }
     }
 }
